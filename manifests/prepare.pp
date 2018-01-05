@@ -28,7 +28,6 @@ class wildfly::prepare {
     owner   => $wildfly::user,
     group   => $wildfly::group,
     mode    => '0755',
-    require => User[$wildfly::user],
   }
 
   if $wildfly::package_ensure {
